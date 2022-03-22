@@ -18,14 +18,35 @@
     <form method="get" action="procesamiento.php">
       <!-- Datos usuario -->
       <p>
-        <label for="idUsuario">
-          Usuario:
-        </label>
-        <input type="text" name="usuario" id="idUsuario" ><br/>
-        <label for="idContrasena">
-          Contraseña:
-        </label>
+        <label for="idUsuario">Usuario:</label>
+        <input type="text" name="usuario" id="idUsuario" placeholder="Usuario"><br/>
+        <label for="idContrasena">Contraseña:</label>
         <input type="password" name="contrasena" id="idContrasena" placeholder="Contraseña"><br/>
+        <label for="idFechaNac">Fecha de nacimiento:</label>
+        <input type="date" name="fechaNac" id="idFechaNac"/><br/>
+      </p>
+      <p>
+        Elige tu género:<br/>
+        <input type="radio" name="genero" value="hombre" id="idHombre">
+        <label for="idHombre">Hombre</label></br>
+        <input type="radio" name="genero" value="mujer" id="idMujer">
+        <label for="idMujer">Mujer</label><br/>
+        <input type="radio" name="genero" value="nb" id="idNB">
+        <label for="idNB">No binario</label><br/>
+      </p>
+      <p>
+        Comida favorita:<br/>
+        <input type="checkbox" name="comida[]" value="CarneS" id="idCarneS">
+        <label for="idCarneS">Carne en salsa</label><br>
+        <input type="checkbox" name="comida[]" value="Crocretas" id="idCrocretas">
+        <label for="idCrocretas">Crocretas</label><br>
+        <label for="">Lasaña</label><br>
+        <label for="">Macarrones con tomatico</label><br>
+        <label for="">Migas con melón</label><br>
+        <label for="">Pan</label><br>
+        <label for="">Pizza</label><br>
+        <label for="">Solomillo salsa Roquefort</label><br>
+
       </p>
       <!-- Boton -->
       <p>
