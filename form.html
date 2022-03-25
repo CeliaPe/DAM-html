@@ -5,7 +5,7 @@
     <meta charset="utf-8"/>
     <title>Formulario</title>
   </head>
-  <body>
+
     <!--
     Method => post o get.
     Post para mandar la informacion en el cuerpo del mensaje. Codificado y ci-
@@ -15,15 +15,18 @@
     puede leer todo el mundo. No es apto para contraseñas.
     Action => Tenemos que indicar qué archivo lo recibe.
     -->
-    <form method="get" action="procesamiento.php">
+    <form method="get" action="procesamiento.php" target="_blank" autocomplete>
+      <!-- target="_self" -->
       <!-- Datos usuario -->
       <p>
-        <label for="idUsuario">Usuario:</label>
-        <input type="text" name="usuario" id="idUsuario" placeholder="Usuario"><br/>
-        <label for="idContrasena">Contraseña:</label>
-        <input type="password" name="contrasena" id="idContrasena" placeholder="Contraseña"><br/>
-        <label for="idFechaNac">Fecha de nacimiento:</label>
-        <input type="date" name="fechaNac" id="idFechaNac"/><br/>
+        <fieldset> <legend>Datos personales</legend>
+          <label for="idUsuario">Usuario:</label>
+          <input type="text" name="usuario" id="idUsuario" placeholder="Usuario"><br/>
+          <label for="idContrasena">Contraseña:</label>
+          <input type="password" name="contrasena" id="idContrasena" placeholder="Contraseña"><br/>
+          <label for="idFechaNac">Fecha de nacimiento:</label>
+          <input type="date" name="fechaNac" id="idFechaNac"/><br/>
+        </fieldset>
       </p>
       <p>
         Elige tu género:<br/>
@@ -31,7 +34,7 @@
         <label for="idHombre">Hombre</label></br>
         <input type="radio" name="genero" value="mujer" id="idMujer">
         <label for="idMujer">Mujer</label><br/>
-        <input type="radio" name="genero" value="nb" id="idNB">
+        <input type="radio" name="genero" value="nb" id="idNB" checked>
         <label for="idNB">No binario</label><br/>
       </p>
       <p>
@@ -40,14 +43,65 @@
         <label for="idCarneS">Carne en salsa</label><br>
         <input type="checkbox" name="comida[]" value="Crocretas" id="idCrocretas">
         <label for="idCrocretas">Crocretas</label><br>
+        <input type="checkbox" name="comida[]" value="Lasana" id="idLasana">
         <label for="">Lasaña</label><br>
+        <input type="checkbox" name="comida[]" value="Macarrones" id="idMacarrones">
         <label for="">Macarrones con tomatico</label><br>
+        <input type="checkbox" name="comida[]" value="Migas" id="idMigas" checked>
         <label for="">Migas con melón</label><br>
+        <input type="checkbox" name="comida[]" value="Pan" id="idPan">
         <label for="">Pan</label><br>
+        <input type="checkbox" name="comida[]" value="Pizza" id="idPizza">
         <label for="">Pizza</label><br>
+        <input type="checkbox" name="comida[]" value="Solomillo" id="idSolomillo">
         <label for="">Solomillo salsa Roquefort</label><br>
-
       </p>
+
+      <p>
+        <label for="idComidaFavSelect">Comida favorita</label><br>
+        <select name="ComidaFavSelect" id="idComidaFavSelect">
+          <option value="Migas">Migas</option>
+          <option value="Pizza">Pizza</option>
+        </select>
+      </p>
+
+      <p>
+        <label for="idComidaFavLista">Comida favorita</label><br>
+        <input list="ComidaFavLista" name="NameComidaFavLista" id="idComidaFavLista"/>
+        <datalist id="ComidaFavLista">
+          <option value="Migas"/>
+          <option value="Pizza"/>
+        </datalist>
+      </p>
+
+      <!--
+      <p>
+        <label for="idTexto">Añadir comentario: </label><br>
+        <textarea name="texto" id="idTexto" rows="10" cols="30">
+        </textarea></br>
+      -->
+<!-- Lo normal es no poner ni filas ni columnas y ajustarlo con el css -->
+      <!--
+        <label for="idOtroTexto">Añadir otro comentario: </label><br>
+        <textarea name="otroTexto" id="idOtroTexto">
+        </textarea>
+      </p>
+    -->
+    <!-- Lista con input -->
+
+    Input boton: <input type="button"><br>
+    Input color: <input type="color"><br>
+    Input fecha: <input type="date"><br>
+    Input email: <input type="email"><br>
+    Input archivo: <input type="file"><br>
+    Input consulta: <input type="image"><br>
+    Input mes: <input type="month"><br>
+    Input numero: <input type="number"><br>
+    Input reset: <input type="reset"><br>
+    Input busqueda: <input type="search"><br>
+    Input telefono: <input type="tel"><br>
+    Input tiempo: <input type="time"><br>
+    Input url: <input type="url"><br>
       <!-- Boton -->
       <p>
         <input type="submit" value="Click aqui"></input>
