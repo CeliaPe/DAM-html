@@ -1,0 +1,30 @@
+body {
+  font-family: monospace;
+  /*background-color: rgba(0,200,255,0.5);*/
+  background-image: url(https://i.pinimg.com/originals/65/95/d7/6595d7b3c6c16e23019ed592e60a92ec.gif);
+  opacity: 0.8;
+  /* #00c8ff // hsl(192,100%,50%)*/
+  text-align: center;
+  color: blue;
+}
+h1 {
+  background-color: dodgerblue;
+  /*color: blue;*/
+}
+
+p {
+  background-color: slateblue;
+  color: purple;
+  border: 5px groove violet;
+  border-radius: 25px;
+  text-align: left;
+}
+.par {
+  font-style: italic;
+  font-weight: bold;
+}
+p.par{
+  text-align: right;
+  border: 5px dotted violet;
+  color: yellow;
+}
